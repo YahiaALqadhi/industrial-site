@@ -4,7 +4,7 @@
 
 @section('meta_description', $category->description ?: 'Explore ' . $category->name . ' industrial products, subcategories, and sourcing solutions.')
 
-@section('meta_image', $category->image ? asset('storage/'.$category->image) : asset('assets/images/products_hero.jpg'))
+@section('meta_image', $category->image ? asset('storage/'.$category->image) : asset('assets/images/og-image.png.jpg'))
 
 @section('canonical', route('products.category', $category->slug))
 

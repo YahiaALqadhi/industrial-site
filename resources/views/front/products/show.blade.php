@@ -4,7 +4,7 @@
 
 @section('meta_description', $product->short_desc ?: \Illuminate\Support\Str::limit(strip_tags($product->description ?: 'Industrial product details, specifications, features, brochure, and sourcing inquiry support.'), 155))
 
-@section('meta_image', $product->cover_image ? asset('storage/'.$product->cover_image) : asset('assets/images/products/default.jpg'))
+@section('meta_image', $product->cover_image ? asset('storage/'.$product->cover_image) : asset('assets/images/og-image.png.jpg'))
 
 @section('canonical', route('products.show', $product->slug))
 

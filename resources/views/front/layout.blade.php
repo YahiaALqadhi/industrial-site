@@ -11,7 +11,7 @@
             'NPCO Limited delivers industrial sourcing, engineering equipment, automation products, technical coordination, and reliable supply solutions from China to global markets.'
         ));
 
-        $seoImage = trim($__env->yieldContent('meta_image', asset('assets/images/logo.png')));
+        $seoImage = trim($__env->yieldContent('meta_image', asset('assets/images/og-image.png')));
         $canonicalUrl = trim($__env->yieldContent('canonical', url()->current()));
     @endphp
     <meta charset="utf-8">

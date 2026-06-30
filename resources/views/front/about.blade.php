@@ -4,7 +4,7 @@
 
 @section('meta_description', 'Learn about NINGBO PASAFEITE IMPORT AND EXPORT CO, LTD, an industrial sourcing partner specializing in engineering equipment, automation solutions, materials, supplier coordination, and delivery support.')
 
-@section('meta_image', asset('assets/images/about/hero.jpg'))
+@section('meta_image', asset('assets/images/about/og-image.png'))
 
 @section('canonical', route('about'))
 
