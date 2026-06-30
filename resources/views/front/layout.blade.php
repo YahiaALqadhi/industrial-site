@@ -14,7 +14,6 @@
         $seoImage = trim($__env->yieldContent('meta_image', asset('assets/images/logo.jpg')));
         $canonicalUrl = trim($__env->yieldContent('canonical', url()->current()));
     @endphp
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -33,13 +32,17 @@
     <meta property="og:url" content="{{ $canonicalUrl }}">
     <meta property="og:image" content="{{ $seoImage }}">
     <meta property="og:site_name" content="{{ $siteName }}">
-
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="{{ $siteName }}">
+<meta property="og:image:type" content="image/jpeg">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@yield('twitter_site','')">
+<meta name="twitter:creator" content="@yield('twitter_creator','')">
     <meta name="twitter:title" content="{{ $seoTitle }}">
     <meta name="twitter:description" content="{{ $seoDescription }}">
     <meta name="twitter:image" content="{{ $seoImage }}">
 
-    <link rel="icon" type="image/jpeg" href="{{ asset('assets/images/logo.jpg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
     <link rel="shortcut icon" href="{{ asset('assets/images/logo.jpg') }}">
 
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -49,6 +52,7 @@
         {
             "@context": "https://schema.org",
             "@type": "Organization",
+            "description": "Industrial sourcing and engineering equipment supplier based in China.",
             "name": "{{ $siteName }}",
             "url": "{{ url('/') }}",
             "logo": "{{ asset('assets/images/logo.jpg') }}",

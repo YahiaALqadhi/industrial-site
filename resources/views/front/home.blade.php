@@ -1,8 +1,8 @@
 @extends('front.layout')
 
-@section('title', 'Home')
+@section('title', 'Industrial Sourcing & Engineering Equipment Supplier in China')
 
-@section('meta_description', 'Industrial sourcing company providing engineering equipment, automation solutions, materials supply, and reliable B2B procurement services from China with full documentation and delivery coordination.')
+@section('meta_description', 'Professional industrial sourcing company in China supplying engineering equipment, automation systems, industrial materials, OEM manufacturing, procurement, inspection, and global export solutions.')
 
 @section('meta_image', asset('assets/images/products_hero.jpg'))
 
