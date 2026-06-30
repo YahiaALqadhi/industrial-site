@@ -122,11 +122,13 @@
                 <div data-reveal class="perspective-wrap relative">
                     <div class="magnetic-card gpu-layer relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/10" data-mouse-depth="11">
                         <img
-                            src="{{ asset('assets/images/about/hero.jpg') }}"
-                            class="h-[460px] w-full rounded-[1.5rem] object-cover"
-                            alt="Industrial facility"
-                            data-parallax="40"
-                        >
+    src="{{ asset('assets/images/about/hero.jpg') }}"
+    class="h-[460px] w-full rounded-[1.5rem] object-cover"
+    alt="Industrial facility"
+    data-parallax="40"
+    loading="lazy"
+    decoding="async"
+>
 
                         <div class="absolute inset-x-8 bottom-8 rounded-3xl border border-white/40 bg-white/90 p-5 shadow-xl backdrop-blur-xl">
                             <div class="text-sm font-black text-[#015ea4]">Structured Industrial Support</div>
@@ -193,10 +195,12 @@
                 >
                     <div class="relative overflow-hidden">
                         <img
-                            class="h-60 w-full object-cover transition duration-700 group-hover:scale-110"
-                            src="{{ $category->image ? asset('storage/'.$category->image) : asset('assets/images/default.jpg') }}"
-                            alt="{{ $category->name }}"
-                        >
+    class="h-60 w-full object-cover transition duration-700 group-hover:scale-110"
+    src="{{ $category->image ? asset('storage/'.$category->image) : asset('assets/images/default.jpg') }}"
+    alt="{{ $category->name }}"
+    loading="lazy"
+    decoding="async"
+>
 
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent transition duration-500 group-hover:from-[#015ea4]/50 group-hover:via-[#015ea4]/25"></div>
                     </div>
@@ -249,10 +253,12 @@
                     data-mouse-depth="3"
                 >
                     <img
-                        class="h-56 w-full object-cover transition duration-700 group-hover:scale-110"
-                        src="{{ $service->image ? asset('storage/'.$service->image) : asset('assets/images/products_hero.jpg') }}"
-                        alt="{{ $service->title }}"
-                    >
+    class="h-56 w-full object-cover transition duration-700 group-hover:scale-110"
+    src="{{ $service->image ? asset('storage/'.$service->image) : asset('assets/images/products_hero.jpg') }}"
+    alt="{{ $service->title }}"
+    loading="lazy"
+    decoding="async"
+>
 
                     <div class="flex flex-1 flex-col p-7">
                         <h3 class="text-lg font-black text-slate-950 transition group-hover:text-[#015ea4]">
