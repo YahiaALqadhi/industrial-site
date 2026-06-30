@@ -4,7 +4,7 @@
 
 @section('meta_description', 'Professional industrial sourcing company in China supplying engineering equipment, automation systems, industrial materials, OEM manufacturing, procurement, inspection, and global export solutions.')
 
-@section('meta_image', asset('assets/images/products_hero.jpg'))
+@section('meta_image', asset('assets/images/logo.png'))
 
 @section('canonical', url('/'))
 
