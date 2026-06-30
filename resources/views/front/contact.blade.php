@@ -4,7 +4,7 @@
 
 @section('meta_description', 'Contact NINGBO PASAFEITE for industrial sourcing, engineering equipment, automation products, raw materials, quotations, technical requirements, and delivery coordination.')
 
-@section('meta_image', asset('assets/images/og-image.png'))
+@section('meta_image', asset('assets/images/og-image.jpg'))
 
 @section('canonical', route('contact'))
 

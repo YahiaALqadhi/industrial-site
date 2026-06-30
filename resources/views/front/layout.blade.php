@@ -11,7 +11,7 @@
             'NPCO Limited delivers industrial sourcing, engineering equipment, automation products, technical coordination, and reliable supply solutions from China to global markets.'
         ));
 
-        $seoImage = trim($__env->yieldContent('meta_image', asset('assets/images/og-image.png')));
+        $seoImage = trim($__env->yieldContent('meta_image', asset('assets/images/og-image.jpg')));
         $canonicalUrl = trim($__env->yieldContent('canonical', url()->current()));
     @endphp
     <meta charset="utf-8">
@@ -34,7 +34,7 @@
     <meta property="og:site_name" content="{{ $siteName }}">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:alt" content="{{ $siteName }}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="image/jpeg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@yield('twitter_site','')">
 <meta name="twitter:creator" content="@yield('twitter_creator','')">

@@ -4,7 +4,7 @@
 
 @section('meta_description', 'Browse industrial product categories including engineering solutions, automation components, raw materials, packaging products, building materials, and customized B2B sourcing services.')
 
-@section('meta_image', asset('assets/images/og-image.png.jpg'))
+@section('meta_image', asset('assets/images/og-image.jpg'))
 
 @section('canonical', route('products.index'))
 
