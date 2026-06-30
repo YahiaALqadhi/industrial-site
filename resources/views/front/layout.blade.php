@@ -35,6 +35,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image:alt" content="{{ $siteName }}">
 <meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@yield('twitter_site','')">
 <meta name="twitter:creator" content="@yield('twitter_creator','')">
