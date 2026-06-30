@@ -122,7 +122,7 @@
                 <div data-reveal class="perspective-wrap relative">
                     <div class="magnetic-card gpu-layer relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-900/10" data-mouse-depth="11">
                         <img
-    src="{{ asset('assets/images/about/hero.jpg') }}"
+    src="{{ asset('assets/images/about/hero.webp') }}"
     class="h-[460px] w-full rounded-[1.5rem] object-cover"
     alt="Industrial facility"
     data-parallax="40"
