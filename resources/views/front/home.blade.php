@@ -1,6 +1,6 @@
 @extends('front.layout')
 
-@section('title', 'Industrial Sourcing & Engineering Equipment Supplier in China')
+@section('title', 'Home')
 
 @section('meta_description', 'Professional industrial sourcing company in China supplying engineering equipment, automation systems, industrial materials, OEM manufacturing, procurement, inspection, and global export solutions.')
 
