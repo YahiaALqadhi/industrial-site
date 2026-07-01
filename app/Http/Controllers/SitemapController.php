@@ -9,53 +9,58 @@ class SitemapController extends Controller
 {
     public function index()
     {
-        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        $xml = new \XMLWriter();
 
-        // الصفحة الرئيسية
-        $xml .= '<url>';
-        $xml .= '<loc>' . url('/') . '</loc>';
-        $xml .= '<changefreq>daily</changefreq>';
-        $xml .= '<priority>1.0</priority>';
-        $xml .= '</url>';
+        $xml->openMemory();
+        $xml->startDocument('1.0', 'UTF-8');
 
-        // About
-        $xml .= '<url>';
-        $xml .= '<loc>' . route('about') . '</loc>';
-        $xml .= '</url>';
+        $xml->setIndent(true);
+        $xml->setIndentString('    ');
 
-        // Services
-        $xml .= '<url>';
-        $xml .= '<loc>' . route('services') . '</loc>';
-        $xml .= '</url>';
+        $xml->startElement('urlset');
+        $xml->writeAttribute(
+            'xmlns',
+            'http://www.sitemaps.org/schemas/sitemap/0.9'
+        );
 
-        // Contact
-        $xml .= '<url>';
-        $xml .= '<loc>' . route('contact') . '</loc>';
-        $xml .= '</url>';
+        // Home
+        $xml->startElement('url');
+        $xml->writeElement('loc', url('/'));
+        $xml->writeElement('changefreq', 'daily');
+        $xml->writeElement('priority', '1.0');
+        $xml->endElement();
 
-        // Products
-        $xml .= '<url>';
-        $xml .= '<loc>' . route('products.index') . '</loc>';
-        $xml .= '</url>';
+        foreach ([
+            route('about'),
+            route('services'),
+            route('contact'),
+            route('products.index'),
+        ] as $page) {
+            $xml->startElement('url');
+            $xml->writeElement('loc', $page);
+            $xml->endElement();
+        }
 
-        // Categories
         foreach (Category::all() as $category) {
-            $xml .= '<url>';
-            $xml .= '<loc>' . route('products.category', $category->slug) . '</loc>';
-            $xml .= '</url>';
+            $xml->startElement('url');
+            $xml->writeElement('loc', route('products.category', $category->slug));
+            $xml->endElement();
         }
 
-        // Products
         foreach (Product::all() as $product) {
-            $xml .= '<url>';
-            $xml .= '<loc>' . route('products.show', $product->slug) . '</loc>';
-            $xml .= '</url>';
+            $xml->startElement('url');
+            $xml->writeElement('loc', route('products.show', $product->slug));
+            $xml->endElement();
         }
 
-        $xml .= '</urlset>';
+        $xml->endElement();
 
-        return response($xml, 200)
-            ->header('Content-Type', 'application/xml');
+        return response(
+            $xml->outputMemory(),
+            200,
+            [
+                'Content-Type' => 'application/xml; charset=UTF-8'
+            ]
+        );
     }
 }
