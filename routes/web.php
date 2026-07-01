@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\AdminTestEmailController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\SystemHealthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -75,5 +76,5 @@ Route::prefix('admin')
         Route::post('system-health/test-mail', [SystemHealthController::class, 'testMail'])->name('system-health.test-mail');
         Route::post('system-health/clear-cache', [SystemHealthController::class, 'clearCache'])->name('system-health.clear-cache');
     });
-
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
 require __DIR__.'/auth.php';
